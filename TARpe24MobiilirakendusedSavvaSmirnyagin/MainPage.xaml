@@ -8,6 +8,7 @@
             Padding="30,0"
             Spacing="25">
             <Image
+                x:Name="botImage"
                 Source="dotnet_bot.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
@@ -19,10 +20,13 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
+                x:Name="CounterLabel"
+                Text=""
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+            
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center"/>
 
             <Button
                 x:Name="CounterBtn"
@@ -30,6 +34,13 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="ResetBtn"
+                Text="Nulli"
+                SemanticProperties.Hint="Resets counting button"
+                BackgroundColor="Red"
+                Clicked="ResetBtn_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 
